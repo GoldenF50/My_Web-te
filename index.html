@@ -1,5 +1,587 @@
-<h1>Daniel Holmes</h1>
- <a href="./public/about.html"><img src="/assets/images/Cartoon (4).jpg" alt="A black teenager" /></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Project Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for slideshow */
+        .slide {
+            display: none;
+            animation: fade 0.5s ease-in-out;
+        }
+        
+        .slide.active {
+            display: block;
+        }
+        
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        
+        /* Custom styling for content sections */
+        .content-section {
+            min-height: 80vh;
+            scroll-margin-top: 4rem;
+        }
+        
+        /* Sticky header */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Sticky Navigation -->
+    <header class="sticky-header bg-white/80 shadow-sm">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    Senior Project
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="#slides" class="text-gray-700 hover:text-indigo-600 transition">Presentation</a>
+                    <a href="#conclusion" class="text-gray-700 hover:text-indigo-600 transition">Conclusion</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+                <a href="#slides" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Presentation</a>
+                <a href="#conclusion" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Conclusion</a>
+            </div>
+        </nav>
+    </header>
 
-<hr />
-<a href="./public/contact.html">Contact Me</a>
+    <!-- Hero Section -->
+    <section id="home" class="content-section bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Daniel's Senior Project Presentation</h1>
+                <p class="text-xl mb-8">This is my senior project on a website mostly beacuse I CAN. It  is still on the docs though. Feel free to scroll the page.</p>
+                <div class="flex space-x-4">
+                    <a href="#slides" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        View Slides <i class="fas fa-arrow-down ml-2"></i>
+                    </a>
+                    <a href="#about" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition">
+                        Final Items <i class="fas fa-book-open ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-2xl p-2 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Project Illustration" class="rounded-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section bg-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">The things you want to grade</h2>
+            
+            <div class="grid md:grid-cols-1 gap-10">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Resume & Cover Letter</h3>
+                    <p class="text-gray-600"><ul>
+                      <li><a href="https://drive.google.com/file/d/13t9VfYTNzt5pBwPpSTnQ1akohq44xiE0/view?usp=sharing" target="_blank">Resume</a></li>
+                      <li><a href="https://docs.google.com/document/d/1SPTknJ-wXgk7SKsGrs3xr5w_Ffl9u4LY/edit?usp=sharing&ouid=101652376676744324191&rtpof=true&sd=true" target="_blank">Cover Letter</a></li>
+                      <li><a href="https://drive.google.com/file/d/1LvBSM2SVdfJuLLf2TR_CDe-cER5gKDLF/view?usp=sharing" target="_blank">Xello Sreenshot</a></li>
+                      </ul>
+                    </p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Class Papers</h3>
+                    <p class="text-gray-600"><ul>
+                      <li><a href="https://www.canva.com/design/DAGjZc3G57Q/_Cs-IHOycfNg4DhvBlUE6w/edit?utm_content=DAGjZc3G57Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">APA & MLA Infographic</a></li>
+                      <li><a href="https://docs.google.com/document/d/157daQb_YWwHSUxgHhOXd8NaIRI9GHUPZDIZ9NSlMIzE/edit?usp=sharing" target="_blank">Argumentative Final Essay</a></li>
+                      <li><a href="https://docs.google.com/document/d/1ZUNZpBsqYJPAWhGYF6_OGW4W_v-1LGryethhOceAzZg/edit?usp=sharing" target="_blank"> Personal Statement</a></li>
+                      </ul></p>
+                </div>
+                
+                <a href="https://docs.google.com/document/d/1w22nb9onqbFctVlnIzMbOWIkng7iNZdK8_Ovb5RyKZU/edit?usp=sharing" target="_blank"> <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Black History Month Quotes & Magizine Article</h3>
+                    <p class="text-gray-600">The article is at the top and the quote is at the bottom.</p>
+                </div></a>
+            </div>
+            
+            <div class="mt-16 bg-indigo-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-700">Fasfa and Scholarships</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-medium mb-3 text-gray-800">Senior Requirements</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                <span><a href="https://docs.google.com/spreadsheets/d/1ZB4mmfl09uBFTjyqlSNYcioQ4Dp1hDZTbyWNsiZBebw/edit?usp=sharing" target="_blank">Senior Data Sheet</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                <span><a href="https://docs.google.com/document/d/1B3WRMZfrAnmo2EA5w6UvG_ZLLIgSySDRIpg2uyGw4QA/edit?usp=sharing" target="_blank">SCF Scholarship Questions</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                <span><a href="https://docs.google.com/spreadsheets/d/1wozeRQ2JndEISYAK8zPc7UAHtsEnJBelWm2M8rGxE24/edit?usp=sharing" target="_blank">FASFA Info Sheet (What is that Even)</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium mb-3 text-gray-800">References</h4>
+                        <p class="text-gray-700"><a href="https://docs.google.com/document/d/15l8w0SVSN3LUndzz0rt26RmnFvtENsWw/edit?usp=sharing&ouid=101652376676744324191&rtpof=true&sd=true" target="_blank">Mr. Hight Reference Letter</a></p>
+                        <p class="text-gray-700"><a href="https://docs.google.com/document/d/1JDa29pzXzXeupCMI7acFYONgsPd5rKRhMeRM7b-_7oI/edit?usp=sharing" target="_blank">Mr. Glupker Reference Letter</a></p>
+                        <p class="text-gray-700"><a href="https://docs.google.com/document/d/1VTfhwuGl7S0SMHVTtIA_E8tIRFxwsv84xLTRCNEPHPY/edit?usp=sharing" target="_blank">Ms. Lechner Reference Letter</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section id="slides" class="content-section bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Senior Project Presentation</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <!-- Slideshow controls -->
+                <div class="flex justify-between items-center bg-indigo-600 text-white p-4">
+                    <button id="prev-slide" class="p-2 rounded-full hover:bg-indigo-700 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="slide-counter" class="font-medium">Slide 1 of 5</div>
+                    <button id="next-slide" class="p-2 rounded-full hover:bg-indigo-700 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Slides container -->
+                <div class="relative h-96 overflow-hidden">
+                    <!-- Slide 1 -->
+                    <div class="slide active p-8 h-full">
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Introduction & About Me</h3>
+                            <p class="text-gray-700 mb-6">Welcome to my senior project presentation. These are the things that I enjoy.</p>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-500 mt-2 mr-2"></i>
+                                    <span>Innovative Solutions for Modern Challenges </span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-500 mt-2 mr-2"></i>
+                                    <span>Gaming</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-circle text-xs text-indigo-500 mt-2 mr-2"></i>
+                                    <span>Challenging myself to do better</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="slide p-8 h-full">
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">My Job Responsiblities</h3>
+                            <p class="text-gray-700 mb-6">I work at Long John Silvers, Unhappily of... Nevermind. Here is what I do.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="bg-indigo-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-indigo-700 mb-2">Cook</h4>
+                                    <p class="text-gray-700">I cook so that orders can be taken to the people who pays for the meal.</p>
+                                </div>
+                                <div class="bg-indigo-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-indigo-700 mb-2">Clean</h4>
+                                    <p class="text-gray-700">While I'm cooking I'll also be cleaning the whole 'Back of House'.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="slide p-8 h-full">
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Next Steps</h3>
+                            <p class="text-gray-700 mb-6">What I will I be doing after Graduation:</p>
+                            <div class="relative">
+                                <div class="border-l-2 border-indigo-200 pl-6 space-y-8">
+                                    <div class="relative">
+                                        <div class="absolute -left-8 top-0 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white"></div>
+                                        <h4 class="font-semibold text-gray-800">Phase 1: College</h4>
+                                        <p class="text-gray-600 mt-1">Delta College to be exact and learn Computer Science</p>
+                                    </div>
+                                    <div class="relative">
+                                        <div class="absolute -left-8 top-0 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white"></div>
+                                        <h4 class="font-semibold text-gray-800">Phase 2: Get Better Job</h4>
+                                        <p class="text-gray-600 mt-1">I'll always be looking for a better job in America, and yes I curently hate my current Job</p>
+                                    </div>
+                                    <div class="relative">
+                                        <div class="absolute -left-8 top-0 w-5 h-5 rounded-full bg-indigo-500 border-4 border-white"></div>
+                                        <h4 class="font-semibold text-gray-800">Phase 3: Live life lavishly</h4>
+                                        <p class="text-gray-600 mt-1">If everything goes as planned then this is an achivable goal to get. If not then I'm leaving America might still leave here just because.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="slide p-8 h-full">
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">My Performance</h3>
+                            <p class="text-gray-700 mb-6">This is about how much I try on a daily basis</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Performance Metrics</h4>
+                                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                                        <div class="flex justify-between mb-2">
+                                            <span class="text-gray-600">Efficiency</span>
+                                            <span class="font-medium text-indigo-600">55%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-red-600 h-2.5 rounded-full" style="width: 55%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white border border-gray-200 rounded-lg p-4 mt-3">
+                                        <div class="flex justify-between mb-2">
+                                            <span class="text-gray-600">Accuracy</span>
+                                            <span class="font-medium text-indigo-600">64%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                            <div class="bg-red-600 h-2.5 rounded-full" style="width: 64%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-2">Key Achievements</h4>
+                                    <ul class="space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                            <span>Developed a working prototype of my Profolio Website (If You're seeing this it's ture)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                            <span>Earned a Career Certificate and Articulation credits for delta from SCC</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check text-indigo-500 mt-1 mr-2"></i>
+                                            <span>Received positive feedback from some of my peers</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="slide p-8 h-full">
+                        <div class="h-full flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold text-indigo-600 mb-4">Future Plans 5+ Years</h3>
+                            <p class="text-gray-700 mb-6">The project successfully Complete</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-3">Conclusions</h4>
+                                    <ul class="space-y-3 text-gray-700">
+                                        <li class="flex items-start">
+                                            <div class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="text-xs font-bold">1</span>
+                                            </div>
+                                            <span>I could work harder if I tried and it would most likely help me in the long run.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="text-xs font-bold">2</span>
+                                            </div>
+                                            <span>The methodology proved effective for this type of research</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-3">Future Directions</h4>
+                                    <ul class="space-y-3 text-gray-700">
+                                        <li class="flex items-start">
+                                            <div class="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <i class="fas fa-arrow-right text-xs"></i>
+                                            </div>
+                                            <span>Expand the 'Profolio' to additional use cases</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <div class="bg-purple-100 text-purple-800 rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <i class="fas fa-arrow-right text-xs"></i>
+                                            </div>
+                                            <span>Collaborate with industry partners for the $$$. Kidding, I actually think I should help someone else.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide indicators -->
+                <div class="flex justify-center space-x-2 p-4 bg-gray-100">
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-indigo-300 active" data-slide="0"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-indigo-300" data-slide="1"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-indigo-300" data-slide="2"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-indigo-300" data-slide="3"></button>
+                    <button class="slide-indicator w-3 h-3 rounded-full bg-indigo-300" data-slide="4"></button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://docs.google.com/document/d/1OOCFuMPnWF0fv2h2ok2zLjnzV9J5XCT4Ui3JL7_ft9A/edit?usp=sharing" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition">
+                    <i class="fas fa-download mr-2"></i> See Full Website Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="content-section bg-white py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Project Reflection</h2>
+            
+            <div class="bg-indigo-50 rounded-xl p-8 mb-10">
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-700">Key Takeaways</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-star text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-1">Academic Growth</h4>
+                            <p class="text-gray-700">This project significantly enhanced my research skills and deepened my understanding of the subject matter, preparing me for future academic and professional challenges.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb text-indigo-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-gray-800 mb-1">Practical Application</h4>
+                            <p class="text-gray-700">The hands-on experience gained through this project provided valuable insights into real-world problem-solving and implementation strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800">Acknowledgments</h3>
+                <p class="text-gray-700 mb-6">I would like to express my sincere gratitude to all those who contributed to the success of this project:</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">Daniel Holmes</h4>
+                        <p class="text-gray-600">What?! Myself, I am really spectacular but don't ever try my best on anything. Just Kidding.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium text-gray-800 mb-2">SCC</h4>
+                        <p class="text-gray-600">SCC for providing the resources and environment conducive to the skill needed for this website.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <p class="text-gray-700">This project represents not just an academic requirement, but a personal journey of growth, discovery, and achievement that I will carry forward into my future endeavors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap mr-2"></i> Senior Project
+                    </h3>
+                    <p class="text-gray-400">I was just doing this for fun to practice my skills you could say.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#slides" class="text-gray-400 hover:text-white transition">Presentation</a></li>
+                        <li><a href="#conclusion" class="text-gray-400 hover:text-white transition">Conclusion</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> holmesd@k12.spsd.net
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-university mr-2"></i> Saginaw United
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-calendar-alt mr-2"></i> Spring 2025
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Senior Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Slideshow functionality
+        const slides = document.querySelectorAll('.slide');
+        const slideIndicators = document.querySelectorAll('.slide-indicator');
+        const prevButton = document.getElementById('prev-slide');
+        const nextButton = document.getElementById('next-slide');
+        const slideCounter = document.getElementById('slide-counter');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideIndicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show the selected slide
+            slides[index].classList.add('active');
+            slideIndicators[index].classList.add('active');
+            
+            // Update counter
+            slideCounter.textContent = `Slide ${index + 1} of ${totalSlides}`;
+            
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+        
+        // Event listeners
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+        
+        // Add click events to indicators
+        slideIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+        
+        // Auto-advance slides (optional)
+        // setInterval(nextSlide, 5000);
+        
+        // Show first slide initially
+        showSlide(0);
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
